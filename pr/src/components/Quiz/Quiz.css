@@ -10,3 +10,50 @@
   border-radius: 10px;
   padding: 40px 50px;
 }
+
+.container hr {
+  height: 2px;
+  border: none;
+  background: #707070;
+}
+
+.container h2 {
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.container ul li {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding-left: 15px;
+  border: 1px solid #686868;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container button {
+  margin: auto;
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #19006c;
+  color: white;
+}
+.container .index {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(#d8c7ff, #19006c);
+  font-family: "poppins";
+}
