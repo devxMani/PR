@@ -57,3 +57,11 @@ body {
   background-image: linear-gradient(#d8c7ff, #19006c);
   font-family: "poppins";
 }
+.correct {
+  background: #dffff2;
+  border-color: #00d397;
+}
+.wrong {
+  background: #ffebeb;
+  border-color: #ff4a4a;
+}
