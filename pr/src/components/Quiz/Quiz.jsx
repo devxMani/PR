@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { data } from "../../assets/data";
 import "./Quiz.css";
 const Quiz = () => {
@@ -7,6 +7,13 @@ const Quiz = () => {
 
   let [lock, setLock] = useState(false);
 
+  let option1 = useRef(null);
+  let option2 = useRef(null);
+  let option3 = useRef(null);
+  let option4 = useRef(null);
+
+  let option_array = [option1, option2, option3, option4];
+
   const checkAns = (e, ans) => {
     if (lock === false) {
       e.target.classList.add("correct");
@@ -14,6 +21,7 @@ const Quiz = () => {
     } else {
       e.target.classList.remove("correct");
       setLock(true);
+      option_array[question.ans - 1].current.classList.add("correct");
     }
 
     if (question.ans === ans) {
@@ -32,6 +40,7 @@ const Quiz = () => {
       </h2>
       <ul>
         <li
+          ref={option1}
           onClick={(e) => {
             checkAns(e, 1);
           }}
@@ -39,6 +48,7 @@ const Quiz = () => {
           {question.option1}
         </li>
         <li
+          ref={option2}
           onClick={(e) => {
             checkAns(e, 2);
           }}
@@ -46,6 +56,7 @@ const Quiz = () => {
           {question.option2}
         </li>
         <li
+          ref={option3}
           onClick={(e) => {
             checkAns(e, 3);
           }}
@@ -53,6 +64,7 @@ const Quiz = () => {
           {question.option3}
         </li>
         <li
+          ref={option4}
           onClick={(e) => {
             checkAns(e, 4);
           }}
