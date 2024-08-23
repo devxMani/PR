@@ -1,8 +1,8 @@
 import "./Background.css";
 import video1 from "../../assets/video1.mp4";
-import image1 from "../../assets/image1.jpg";
-import image2 from "../../assets/image2.jpg";
-import image3 from "../../assets/image3.jpg";
+import image1 from "../../assets/image1.png";
+import image2 from "../../assets/image2.png";
+import image3 from "../../assets/image3.png";
 
 
 const Background = ({playStatus, heroCount}) => {

@@ -5,10 +5,8 @@ import pause_icon from "../../assets/pause_icon.png";
 
 const Hero = ({
   heroData,
- 
+  setHeroCount,
   heroCount,
- 
-  setPla,
   setPlayStatus,
   playStatus,
 }) => {
@@ -32,12 +30,7 @@ const Hero = ({
               <img onclick = {()=>setPlayStatus1(!playStatus)} src="{playStatus?pause_icon}" alt="" />
         <p>See the video</p>
 </div>
-   </div>    
-  
-   </div>
- )
- }
- 
-
-
-export default Hero;
+    </div>
+    </div>
+  );
+};
